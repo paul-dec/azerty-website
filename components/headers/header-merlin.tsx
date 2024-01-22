@@ -26,19 +26,19 @@ export default async function HeaderMerlin() {
           </defs>
         </svg>
       </div>
-      <h1 className={"text-8xl sm:text-9xl mt-auto z-20 " + BluuNextTitling.className}>merlin</h1>
+      <h1 className={"text-8xl sm:text-9xl mt-auto z-20 text-color1 " + BluuNextTitling.className}>merlin</h1>
       <h2 className={"text-4xl sm:text-5xl z-20 text-center text-primary " + BluuNextBold.className}>Touchez au Génie</h2>
-      <p className="py-6 text-xl text-center px-5 max-w-[550px] ">Répondre à vos commentaires Google My Business ne devrait pas vous prendre de temps</p>
+      <p className="py-6 text-xl text-center px-5 max-w-[550px] text-color1">Répondre à vos commentaires Google My Business ne devrait pas vous prendre de temps</p>
       <div className="flex flex-col sm:flex-row gap-4 mb-auto">
         <a href="https://whop.com/merlin-by-azerty" target="_blank" className="relative ml-auto bg-secondary px-8 py-2 rounded-lg	border border-primary">
-          <p className="">Commencer maintenant</p>
+          <p className="text-color1">Commencer maintenant</p>
           <span className="absolute flex h-3 w-3 top-[-4px] right-[-4px]">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-color1 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-color1"></span>
           </span>
         </a>
         <a href="#more" className="sm:ml-auto bg-black px-8 py-2 rounded-lg	border border-secondary shadow-shadowButton">
-          <p className="text-center">En Savoir Plus</p>
+          <p className="text-center text-color1">En Savoir Plus</p>
         </a>
       </div>
       {/* <Image className="mt-10 mb-auto" height={100} width={100} alt="BookMerlin" src="/book-spin.webp" objectFit="contain" /> */}
