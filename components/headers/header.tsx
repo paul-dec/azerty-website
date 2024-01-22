@@ -8,7 +8,7 @@ export default async function Header() {
         <BigLogo />
       </div>
       <h1 className={"text-8xl sm:text-9xl mt-auto z-20 " + BluuNextTitling.className}>azerty</h1>
-      <h2 className={"text-4xl sm:text-5xl text-center text-primary " + BluuNextBold.className}>Les touches du succès</h2>
+      <h2 className={"text-4xl sm:text-5xl text-center text-primary " + BluuNextBold.className}>Les Touches du Succès</h2>
       <p className="py-6 text-xl text-center">Nous automatisons vos taches pour<br />vous faire gagner en productivité</p>
       <div className="flex flex-col sm:flex-row mb-auto gap-4">
         <a href="#2" className="relative ml-auto bg-secondary px-8 py-2 rounded-lg	border border-primary">

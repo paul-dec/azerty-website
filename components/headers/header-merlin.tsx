@@ -27,7 +27,7 @@ export default async function HeaderMerlin() {
         </svg>
       </div>
       <h1 className={"text-8xl sm:text-9xl mt-auto z-20 " + BluuNextTitling.className}>merlin</h1>
-      <h2 className={"text-4xl sm:text-5xl z-20 text-center text-primary " + BluuNextBold.className}>Les touches du succès</h2>
+      <h2 className={"text-4xl sm:text-5xl z-20 text-center text-primary " + BluuNextBold.className}>Touchez au Génie</h2>
       <p className="py-6 text-xl text-center px-5 max-w-[550px] ">Répondre à vos commentaires Google My Business ne devrait pas vous prendre de temps</p>
       <div className="flex flex-col sm:flex-row gap-4 mb-auto">
         <a href="https://whop.com/merlin-by-azerty" target="_blank" className="relative ml-auto bg-secondary px-8 py-2 rounded-lg	border border-primary">
