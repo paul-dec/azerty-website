@@ -46,25 +46,25 @@ export default async function HeaderMerlin() {
       <div className="hidden xl:block absolute bg-secondary w-[1px] h-[920px] top-[-80px] right-special"></div>
       <Image className="hidden md:block absolute top-40 -left-5 xl:left-40 -rotate-6" height={100} width={300} alt="review1" src="/review1.svg" />
       <Image className="hidden md:block absolute bottom-20 -right-5 xl:right-40 rotate-12" height={100} width={300} alt="review2" src="/review2.svg" />
-      <svg className="hidden md:block absolute top-0 right-0 z-50" width="802" height="600" viewBox="0 0 802 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="hidden md:block absolute top-0 right-0 z-50 pointer-events-none" width="802" height="600" viewBox="0 0 802 600" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g opacity="0.3" filter="url(#filter0_f_699_254)">
           <rect x="250" y="250" width="301.46" height="100" fill="#4CEEF8" />
         </g>
         <defs>
-          <filter id="filter0_f_699_254" x="0" y="0" width="801.46" height="600" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <filter id="filter0_f_699_254" x="0" y="0" width="801.46" height="600" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
             <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_699_254" />
           </filter>
         </defs>
       </svg>
-      <svg className="hidden md:block absolute bottom-0 left-0 z-50" width="802" height="600" viewBox="0 0 802 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="hidden md:block absolute bottom-0 left-0 z-50 pointer-events-none" width="802" height="600" viewBox="0 0 802 600" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g opacity="0.3" filter="url(#filter0_f_699_254)">
           <rect x="250" y="250" width="301.46" height="100" fill="#4CEEF8" />
         </g>
         <defs>
-          <filter id="filter0_f_699_254" x="0" y="0" width="801.46" height="600" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <filter id="filter0_f_699_254" x="0" y="0" width="801.46" height="600" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
             <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_699_254" />
           </filter>
