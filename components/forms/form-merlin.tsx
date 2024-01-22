@@ -3,7 +3,7 @@
 import { BluuNextBold, BluuNextTitling } from "@/app/fonts";
 import Script from 'next/script'
 
-export default async function FormMerlin() {
+export default function FormMerlin() {
   return (
     <div id="2" className="flex flex-col items-center relative w-full h-[100vh] justify-center snap-always snap-center">
       <div className="flex flex-col items-center">
