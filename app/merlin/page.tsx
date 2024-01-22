@@ -30,7 +30,7 @@ export default function Merlin() {
             </svg>
             <p className={"select-none text-8xl sm:text-9xl z-20 text-color2 " + BluuNextTitling.className}>1</p>
           </div>
-          <p className={"w-full text-2xl mx-auto text-center sm:text-left z-20 max-w-[800px] text-color2 " + BluuNextTitling.className}>Connectez facilement Merlin à votre compte Google My Business pour lui permettre un accès direct aux commentaires de votre entreprise, assurant ainsi des réponses automatisées instantanées.</p>
+          <p className={"w-full text-2xl sm:text-3xl mx-auto text-center sm:text-left z-20 max-w-[800px] text-color2 " + BluuNextTitling.className}>Connectez facilement Merlin à votre compte Google My Business pour lui permettre un accès direct aux commentaires de votre entreprise, assurant ainsi des réponses automatisées instantanées.</p>
         </div>
         <div className='flex flex-col sm:flex-row-reverse gap-10 sm:gap-20 justify-center items-center mt-20'>
           <div className='relative h-36 w-36 sm:h-56 sm:w-56 flex justify-center items-center'>
@@ -39,7 +39,7 @@ export default function Merlin() {
             </svg>
             <p className={"select-none text-8xl sm:text-9xl z-20 text-color2 " + BluuNextTitling.className}>2</p>
           </div>
-          <p className={"w-full text-2xl mx-auto text-center sm:text-left z-20 max-w-[800px] text-color2 " + BluuNextTitling.className}>Personnalisez Merlin en fournissant des informations spécifiques à votre entreprise. Cela permet à Merlin d&apos;adapter ses réponses à la voix et à l&apos;identité de votre marque, assurant des interactions authentiques en ligne.</p>
+          <p className={"w-full text-2xl sm:text-3xl mx-auto text-center sm:text-left z-20 max-w-[800px] text-color2 " + BluuNextTitling.className}>Personnalisez Merlin en fournissant des informations spécifiques à votre entreprise. Cela permet à Merlin d&apos;adapter ses réponses à la voix et à l&apos;identité de votre marque, assurant des interactions authentiques en ligne.</p>
         </div>
         <div className='flex flex-col sm:flex-row gap-10 sm:gap-20 justify-center items-center mt-20'>
           <div className='relative h-36 w-36 sm:h-56 sm:w-56 flex justify-center items-center'>
@@ -48,7 +48,7 @@ export default function Merlin() {
             </svg>
             <p className={"select-none text-8xl sm:text-9xl z-20 text-color2 " + BluuNextTitling.className}>3</p>
           </div>
-          <p className={"w-full text-2xl mx-auto text-center sm:text-left z-20 max-w-[800px] text-color2 " + BluuNextTitling.className}>Passez à l&apos;étape d&apos;entraînement où Merlin analyse les commentaires passés et apprend des interactions antérieures, garantissant des réponses précises et contextuelles qui reflètent votre entreprise.</p>
+          <p className={"w-full text-2xl sm:text-3xl mx-auto text-center sm:text-left z-20 max-w-[800px] text-color2 " + BluuNextTitling.className}>Passez à l&apos;étape d&apos;entraînement où Merlin analyse les commentaires passés et apprend des interactions antérieures, garantissant des réponses précises et contextuelles qui reflètent votre entreprise.</p>
         </div>
         <div className='flex flex-col sm:flex-row-reverse gap-10 sm:gap-20 justify-center items-center mt-20'>
           <div className='relative h-36 w-36 sm:h-56 sm:w-56 flex justify-center items-center'>
@@ -57,7 +57,7 @@ export default function Merlin() {
             </svg>
             <p className={"select-none text-8xl sm:text-9xl z-20 text-color2 " + BluuNextTitling.className}>4</p>
           </div>
-          <p className={"w-full text-2xl mx-auto text-center sm:text-left z-20 max-w-[800px] text-color2 " + BluuNextTitling.className}>Après l&apos;entraînement, laissez Merlin répondre automatiquement aux nouveaux commentaires, offrant une réactivité immédiate tout en préservant la personnalité distinctive de votre entreprise. Consacrez votre temps à d&apos;autres aspects de votre activité en laissant Merlin gérer vos interactions en ligne.</p>
+          <p className={"w-full text-2xl sm:text-3xl mx-auto text-center sm:text-left z-20 max-w-[800px] text-color2 " + BluuNextTitling.className}>Après l&apos;entraînement, laissez Merlin répondre automatiquement aux nouveaux commentaires, offrant une réactivité immédiate tout en préservant la personnalité distinctive de votre entreprise. Consacrez votre temps à d&apos;autres aspects de votre activité en laissant Merlin gérer vos interactions en ligne.</p>
         </div>
         <a href='https://whop.com/merlin-by-azerty' target='_blank' className='relative flex justify-center items-center p-20 hover:scale-105 transition-all'>
           <svg className='w-full h-full absolute' viewBox="0 0 555 138" fill="none" xmlns="http://www.w3.org/2000/svg">
