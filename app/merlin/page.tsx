@@ -58,7 +58,7 @@ export default function Merlin() {
             </svg>
             <p className={"select-none text-8xl sm:text-9xl z-20 text-color2 " + BluuNextTitling.className}>4</p>
           </div>
-          <p className={"w-full text-3xl mx-auto text-center sm:text-left z-20 max-w-[800px] text-color2 " + BluuNextTitling.className}>Après l&apos;entraînement, laissez Merlin répondre automatiquement aux nouveaux commentaires, offrant une réactivité immédiate tout en préservant la personnalité distinctive de votre entreprise. Consacrez votre temps à d'autres aspects de votre activité en laissant Merlin gérer vos interactions en ligne.</p>
+          <p className={"w-full text-3xl mx-auto text-center sm:text-left z-20 max-w-[800px] text-color2 " + BluuNextTitling.className}>Après l&apos;entraînement, laissez Merlin répondre automatiquement aux nouveaux commentaires, offrant une réactivité immédiate tout en préservant la personnalité distinctive de votre entreprise. Consacrez votre temps à d&apos;autres aspects de votre activité en laissant Merlin gérer vos interactions en ligne.</p>
         </div>
         <a href='https://whop.com/merlin-by-azerty' target='_blank' className='relative flex justify-center items-center p-20 hover:scale-105 transition-all'>
           <svg className='w-full h-full absolute' viewBox="0 0 555 138" fill="none" xmlns="http://www.w3.org/2000/svg">
