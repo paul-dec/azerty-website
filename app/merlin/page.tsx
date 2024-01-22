@@ -1,6 +1,5 @@
 import BookMerlin from '@/components/books/book-merlin'
 import ExpertiseSection from '@/components/expertise'
-import FormMerlin from '@/components/forms/form-merlin'
 import HeaderMerlin from '@/components/headers/header-merlin'
 import NavbarMerlin from '@/components/navbars/navbar-merlin'
 import PricingMerlin from '@/components/pricings/pricing-merlin'
