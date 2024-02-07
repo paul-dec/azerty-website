@@ -1,0 +1,21 @@
+{
+  "color": "#9452FF",
+  "price": "<span>Seulement pour 29,99€ par mois<br />ou 199,99€ à l’année</span>",
+  "url": "https://whop.com/merlin-by-azerty/",
+  "name": "Merlin",
+  "title": "<span><span className='text-[#9452FF]'>Magie</span> numérique au service de <span className='text-[#9452FF]'>vos commentaires</span> !</span>",
+  "subtitle": "<span>De l'enchanteur à l'IA, Merlin change la donne de vos avis.</span>",
+  "description": "<span>Réponses automatisées, satisfaction amplifiée - telle est l'incantation de Merlin.</span>",
+  "serviceName1": "Automatisez",
+  "serviceName2": "Séduisez",
+  "serviceName3": "Fidélisez",
+  "serviceDescription1": "Débarrassez-vous du fardeau des réponses manuelles. Merlin, grâce à sa technologie avancée, assure une interaction automatique et personnelle avec vos clients.",
+  "serviceDescription2": "Votre réponse à chaque avis compte. Grâce à l'IA, votre commerce se distingue par son service irréprochable et sa communication enchantée.",
+  "serviceDescription3": "Transformez vos clients occasionnels en ambassadeurs de votre marque. Avec Merlin, chaque réponse à un avis est une occasion de susciter l'engagement et de fidéliser la clientèle.",
+  "advantage1": "Communication sans effort",
+  "advantage2": "Satisfaction client amplifiée",
+  "advantage3": "Outrepassez la barrière linguistique",
+  "advantageDescription1": "Allégez votre charge de travail avec Merlin. Fini les heures passées à rédiger des réponses aux avis clients, notre IA le fait pour vous. Concentrez-vous sur l'essentiel, le service magique de Merlin s'occupe du reste.",
+  "advantageDescription2": "Ne laissez aucun avis sans réponse grâce à Merlin. Un manque de réaction à un commentaire peut entraîner une mauvaise image de marque, alors Merlin répond à tous les avis, positifs ou négatifs. Transformez chaque retour en opportunité de satisfaire vos clients.",
+  "advantageDescription3": "Quels que soient la langue des clients, Merlin saura leur répondre. Notre IA est multicompréhension, offrant une interaction multilingue sans effort. Avec Merlin, vos avis potentiels émanant de toute la planète sont sous contrôle."
+}

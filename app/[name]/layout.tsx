@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
  
 export const metadata: Metadata = {
-  title: 'Merlin by Azerty',
-  description: 'Découvrez Merlin, notre service d\'excellence dédié à la gestion automatisée des avis sur Google My Business.',
+  title: 'Azerty',
+  description: 'Le futur de la programmation',
 }
  
 export default function RootLayout({

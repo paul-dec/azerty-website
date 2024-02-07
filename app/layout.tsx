@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { GeistSans } from './fonts'
+import { Satoshi } from './fonts'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={GeistSans.className}>{children}</body>
+      <body className={Satoshi.className}>{children}</body>
     </html>
   )
 }
