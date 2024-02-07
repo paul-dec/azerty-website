@@ -3,7 +3,7 @@
   "price": "<span>Seulement pour 59,99€ par mois<br />ou 599,99€ à l’année</span>",
   "url": "https://whop.com/prospero-by-azerty/",
   "name": "Prospero",
-  "title": "<span><span className='text-[#2771BB]'>Optimisez</span> votre impact sur LinkedIn avec <span className='text-[#2771BB]'>Prospero</span> !</span>",
+  "title": "<span><span style=\"color: #2570BB\">Optimisez</span> votre impact sur LinkedIn avec <span style=\"color: #2570BB\">Prospero</span> !</span>",
   "subtitle": "<span>Votre assistant personnel de rédaction de posts, grâce à la magie de l'IA.</span>",
   "description": "<span>Avec Prospero, des posts LinkedIn pertinents et engageants sont à portée de main, dans chacune de vos niches d'affaires.</span>",
   "serviceName1": "Recherche",

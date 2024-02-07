@@ -3,7 +3,7 @@
   "price": "<span>Seulement pour 29,99€ par mois<br />ou 199,99€ à l’année</span>",
   "url": "https://whop.com/merlin-by-azerty/",
   "name": "Merlin",
-  "title": "<span><span className='text-[#9452FF]'>Magie</span> numérique au service de <span className='text-[#9452FF]'>vos commentaires</span> !</span>",
+  "title": "<span><span style=\"color: #9452FF\">Magie</span> numérique au service de <span style=\"color: #9452FF\">vos commentaires</span> !</span>",
   "subtitle": "<span>De l'enchanteur à l'IA, Merlin change la donne de vos avis.</span>",
   "description": "<span>Réponses automatisées, satisfaction amplifiée - telle est l'incantation de Merlin.</span>",
   "serviceName1": "Automatisez",
