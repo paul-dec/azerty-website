@@ -9,9 +9,11 @@ import { promises as fs } from 'fs';
 import parse from 'html-react-parser';
 import { GeistSans } from 'geist/font/sans';
 import dynamic from 'next/dynamic';
+import path from 'path';
 
 export default async function Page({ params }: { params: { name: string } }) {
-  const file = await fs.readFile(process.cwd() + '/public/' + params.name + '.json', 'utf8');
+  const myPath = path.join(process.cwd(), 'public', params.name + '.json');
+  const file = await fs.readFile(myPath, 'utf8');
   const data = JSON.parse(file);
 
   return (
