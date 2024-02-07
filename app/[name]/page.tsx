@@ -11,7 +11,7 @@ import { GeistSans } from 'geist/font/sans';
 import dynamic from 'next/dynamic';
 
 export default async function Page({ params }: { params: { name: string } }) {
-  const file = await fs.readFile(process.cwd() + '/mock/' + params.name + '.json', 'utf8');
+  const file = await fs.readFile(process.cwd() + '/public/' + params.name + '.json', 'utf8');
   const data = JSON.parse(file);
 
   return (
