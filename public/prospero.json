@@ -1,0 +1,21 @@
+{
+  "color": "#2570BB",
+  "price": "<span>Seulement pour 59,99€ par mois<br />ou 599,99€ à l’année</span>",
+  "url": "https://whop.com/prospero-by-azerty/",
+  "name": "Prospero",
+  "title": "<span><span className='text-[#2771BB]'>Optimisez</span> votre impact sur LinkedIn avec <span className='text-[#2771BB]'>Prospero</span> !</span>",
+  "subtitle": "<span>Votre assistant personnel de rédaction de posts, grâce à la magie de l'IA.</span>",
+  "description": "<span>Avec Prospero, des posts LinkedIn pertinents et engageants sont à portée de main, dans chacune de vos niches d'affaires.</span>",
+  "serviceName1": "Recherche",
+  "serviceName2": "Conçoit",
+  "serviceName3": "Prépare",
+  "serviceDescription1": "Prospero explore le monde d'internet pour vous, extrayant des nouvelles récentes et pertinentes liées à votre niche.",
+  "serviceDescription2": "Notre IA conçoit des posts LinkedIn qui non seulement informent sur les actualités, mais mettent aussi en valeur vos services.",
+  "serviceDescription3": "Tous vos posts rédigés sont regroupés dans un seul fichier Notion. Vous n'avez qu'à les lire et les programmer selon votre convenance.",
+  "advantage1": "Restez à jour",
+  "advantage2": "Engagement accru",
+  "advantage3": "Efficacité améliorée",
+  "advantageDescription1": "Grâce à Prospero, vous êtes toujours à jour avec les nouveautés de votre niche. Utilisez les informations récentes pour garder un pas d'avance sur la concurrence.",
+  "advantageDescription2": "Chaque post créé par Prospero est conçu pour engager. Attirez plus de followers et suscitez des interactions significatives sur LinkedIn.",
+  "advantageDescription3": "Forget about the hassle of finding news and drafting posts. Prospero removes the grunt work, allowing you to focus on your core tasks."
+}

@@ -43,7 +43,7 @@ export default async function Page({ params }: { params: { name: string } }) {
         </div>
         <div className="grid grid-rows-3 sm:grid-rows-none sm:grid-cols-3 gap-8">
           <div className="flex flex-col items-center gap-4">
-            <h3 className="text-xl font-semibold text-[#9452FF]">{data.serviceName1}</h3>
+            <h3 className={"text-xl font-semibold text-[" + data.color + "]"}>{data.serviceName1}</h3>
             <p className="text-center text-base opacity-80">{data.serviceDescription1}</p>
             <Image
               alt={data.serviceName1}
@@ -58,7 +58,7 @@ export default async function Page({ params }: { params: { name: string } }) {
             />
           </div>
           <div className="flex flex-col items-center gap-4">
-            <h3 className="text-xl font-semibold text-[#9452FF]">{data.serviceName2}</h3>
+            <h3 className={"text-xl font-semibold text-[" + data.color + "]"}>{data.serviceName2}</h3>
             <p className="text-center text-base opacity-80">{data.serviceDescription2}</p>
             <Image
               alt={data.serviceName2}
@@ -73,7 +73,7 @@ export default async function Page({ params }: { params: { name: string } }) {
             />
           </div>
           <div className="flex flex-col items-center gap-4">
-            <h3 className="text-xl font-semibold text-[#9452FF]">{data.serviceName3}</h3>
+            <h3 className={"text-xl font-semibold text-[" + data.color + "]"}>{data.serviceName3}</h3>
             <p className="text-center text-base opacity-80">{data.serviceDescription3}</p>
             <Image
               alt={data.serviceName3}
