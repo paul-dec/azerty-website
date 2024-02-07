@@ -17,7 +17,7 @@ export default async function Page({ params }: { params: { name: string } }) {
   const data = JSON.parse(file);
 
   return (
-    <main className="flex flex-col min-h-screen scroll-smooth overflow-x-hidden	p-8 gap-24">
+    <main className="flex flex-col min-h-screen scroll-smooth overflow-x-hidden p-2	sm:p-8 gap-24">
       <Navbar name={data.name} url={data.url} price={data.price} color={data.color} />
       <div className="flex flex-row max-w-[1000px] w-full mx-auto justify-between">
         <a className='flex items-center'>
