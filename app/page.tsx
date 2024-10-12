@@ -31,7 +31,7 @@ export default function Home() {
   }, []);
   return (
     <main className="flex flex-col items-center">
-      <div id="navbar" className="fixed flex flex-row justify-between w-[calc(100%-1rem)] max-w-xl m-2 px-5 md:px-10 py-4 bg-black rounded-full z-10 transition-all duration-300 ease-in-out -translate-y-[100px] shadow-2xl">
+      <div id="navbar" className="fixed flex flex-row justify-between w-[calc(100%-1rem)] max-w-xl m-2 px-10 py-4 bg-black rounded-full z-10 transition-all duration-300 ease-in-out -translate-y-[100px] shadow-2xl">
         <a href='/'>
           <svg className="h-[40px] cursor-pointer" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M25.5 37.0498L30.7 0.299805H24.2L19 37.0498H25.5Z" className="fill-[#17D449] hover:fill-white cursor-pointer"/>
