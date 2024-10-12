@@ -1,12 +1,37 @@
+"use client";
+
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
+import { useEffect } from 'react';
 
 const ParisTime = dynamic(() => import('./components/parisTime'), { ssr: false })
 
 export default function Home() {
+  useEffect(() => {
+    const navbar = document.getElementById('navbar');
+    const header = document.getElementById('header');
+  
+    const handleScroll = () => {
+      if (navbar && header) {
+        const headerBottom = header.offsetTop + header.offsetHeight;
+        if (window.scrollY >= headerBottom) {
+          navbar.classList.remove('-translate-y-[100px]');
+          navbar.classList.add('translate-y-0');
+        } else {
+          navbar.classList.remove('translate-y-0');
+          navbar.classList.add('-translate-y-[100px]');
+        }
+      }
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+  
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <main className="flex flex-col items-center">
-      <div className="fixed bg-black flex flex-row justify-between px-10 md:px-20 py-4 w-full z-10">
+      <div id="navbar" className="fixed flex flex-row justify-between w-[calc(100%-1rem)] max-w-xl m-2 px-5 md:px-10 py-4 bg-black rounded-full z-10 transition-all duration-300 ease-in-out -translate-y-[100px] shadow-2xl">
         <a href='/'>
           <svg className="h-[40px] cursor-pointer" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M25.5 37.0498L30.7 0.299805H24.2L19 37.0498H25.5Z" className="fill-[#17D449] hover:fill-white cursor-pointer"/>
@@ -20,7 +45,21 @@ export default function Home() {
           <a href="mailto:hello@azerty.app" className="text-xl transition-colors duration-300 hover:text-[#17D449]">Contact</a>
         </div>
       </div>
-      <div className="flex pt-24 min-h-[0px] md:pt-0 md:min-h-[800px] h-full w-full flex-col justify-end bg-black py-10 px-10 md:px-20 gap-5">
+      <div id="header" className="relative flex pt-24 min-h-[0px] md:pt-0 md:min-h-[800px] h-full w-full flex-col justify-end bg-black bg-[url('../public/image/background.png')] bg-cover bg-center py-10 px-10 md:px-20 gap-5">
+      <div className="top-0 left-0 absolute flex flex-row justify-between px-10 md:px-20 py-4 w-full z-10">
+        <a href='/'>
+          <svg className="h-[40px] cursor-pointer" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25.5 37.0498L30.7 0.299805H24.2L19 37.0498H25.5Z" className="fill-[#17D449] hover:fill-white cursor-pointer"/>
+            <path d="M15.5 37.0498L20.7 0.299805H14.2L9 37.0498H15.5Z" className="fill-[#17D449] hover:fill-white cursor-pointer"/>
+            <rect y="9" width="6" height="6" className="fill-[#17D449] hover:fill-white cursor-pointer"/>
+            <rect y="25" width="6" height="6" className="fill-[#17D449] hover:fill-white cursor-pointer"/>
+          </svg>
+        </a>
+        <div className="flex flex-row gap-5 items-center">
+          <a href="#work" className="text-xl transition-colors duration-300 hover:text-[#17D449]">Réalisations</a>
+          <a href="mailto:hello@azerty.app" className="text-xl transition-colors duration-300 hover:text-[#17D449]">Contact</a>
+        </div>
+      </div>
         <svg className="w-full md:w-auto md:h-36 self-start" viewBox="0 0 132 38" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M41.95 0.249999L47.1 37H40.6L40.3 33.95H35.85L35.5 37H29L34.2 0.249999H41.95ZM36.45 28.55H39.7L38.2 15.25H37.9L36.45 28.55ZM63.0512 1.2L61.6512 6.2L55.1012 29.5H62.6512V37H48.0512V29.55V29.5L54.6012 6.2H48.4512V0.299999L48.5012 0.249999H63.0512V1.2ZM77.7285 6.55H68.5285L70.7785 8.65V14.15H76.2285V19.3L73.6285 21.85H70.7785V30.4H77.7285V37H64.2785V0.249999H77.7285V6.55ZM89.9688 0.249999C92.7188 0.249999 94.9688 2.5 94.9688 5.25V11.95C94.9688 12.15 94.9688 12.35 94.9188 12.55C94.8688 12.85 94.8188 13.15 94.7188 13.4C94.2688 14.95 93.0688 16.15 91.5188 16.65C93.5188 17.3 94.9688 19.2 94.9688 21.4V37H88.4688V23.1L86.1688 20.9L85.7688 21.25V37H79.2688V6.75V0.249999H89.9688ZM88.4688 12.85V7.1C88.4688 6.25 87.7688 5.6 86.9188 5.6H83.8688L85.7688 7.35V15.45L86.1688 15.05L88.4688 12.85ZM111.795 0.249999V7.05H106.995V37H100.545V7.05H95.7445V0.249999H111.795ZM124.365 0.249999H131.215L125.115 21.55V37H118.665V20.5L112.765 0.249999H119.665L122.015 15.9L124.365 0.249999Z" fill="white"/>
           <path d="M25.5 37.0498L30.7 0.299805H24.2L19 37.0498H25.5Z" fill="#17D449"/>
