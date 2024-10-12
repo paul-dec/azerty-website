@@ -45,7 +45,7 @@ export default function Home() {
           <a href="mailto:hello@azerty.app" className="text-xl transition-colors duration-300 hover:text-[#17D449]">Contact</a>
         </div>
       </div>
-      <div id="header" className="relative flex pt-24 min-h-[0px] md:pt-0 md:min-h-[800px] h-full w-full flex-col justify-end bg-black bg-[url('../public/image/background.png')] bg-cover bg-center py-10 px-10 md:px-20 gap-5">
+      <div id="header" className="relative flex pt-40 min-h-[0px] md:pt-0 md:min-h-[800px] h-full w-full flex-col justify-end bg-black bg-[url('../public/image/background.png')] bg-cover bg-center py-10 px-10 md:px-20 gap-5">
       <div className="top-0 left-0 absolute flex flex-row justify-between px-10 md:px-20 py-4 w-full z-10">
         <a href='/'>
           <svg className="h-[40px] cursor-pointer" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
