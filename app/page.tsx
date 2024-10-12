@@ -22,8 +22,8 @@ export default function Home() {
         <source src="video/showreel.mp4" type="video/mp4"></source>
       </video>
       <div className="flex flex-col gap-20 h-full w-full bg-red-black py-20 md:py-32 px-10 md:px-20">
-        <p className="flex font-extrabold text-3xl md:text-7xl max-w-6xl">Azerty est un studio de création et de développement de sites web et d'applications.</p>
-        <p className="flex font-extrabold text-3xl md:text-7xl max-w-6xl">Fondé en 2023, nous avons acquis une réputation pour la création d'expériences web.</p>
+        <p className="flex font-extrabold text-3xl md:text-7xl max-w-6xl">Azerty est un studio de création et de développement de sites web et d&apos;applications.</p>
+        <p className="flex font-extrabold text-3xl md:text-7xl max-w-6xl">Fondé en 2023, nous avons acquis une réputation pour la création d&apos;expériences web.</p>
       </div>
       <div className="flex flex-col md:grid md:grid-cols-10 h-full w-full py-10 px-10 md:px-20 gap-x-10 gap-y-20">
   <div className="md:col-start-3 md:col-end-[-1] flex flex-col group">
@@ -130,7 +130,7 @@ export default function Home() {
       <div className="grid grid-cols-1 md:grid-cols-3 h-full w-full py-10 px-10 md:px-20 gap-10">
         <div className="col-span-2 flex flex-col gap-2">
           <p className='font-bold'>Nos services</p>
-          <p className="max-w-xl opacity-50">Développement de sites web / Développement d'applications mobiles / Design UX/UI / Création de contenu digital / Maintenance et support technique / Hébergement web / Développement de solutions sur mesure</p>
+          <p className="max-w-xl opacity-50">Développement de sites web / Développement d&apos;applications mobiles / Design UX/UI / Création de contenu digital / Maintenance et support technique / Hébergement web / Développement de solutions sur mesure</p>
         </div>
         <div className="flex flex-col gap-2">
           <p className='font-bold'>Travailler avec nous</p>
