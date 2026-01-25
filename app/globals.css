@@ -2,32 +2,464 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+/* Reset and prevent scrolling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
+/* Mobile: Full screen, no mockup */
+.mobile-container {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  position: relative;
+}
+
+.mobile-wrapper {
+  display: block;
+}
+
+.desktop-wrapper {
+  display: none;
+}
+
+/* Desktop: iPhone mockup wrapper */
+@media (min-width: 768px) {
+  .mobile-wrapper {
+    display: none;
   }
-  100% {
-    transform: translateX(-33%);
+
+  .desktop-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100dvh;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  .iphone-mockup {
+    width: 375px;
+    height: 812px;
+    background: #000;
+    border-radius: 3rem;
+    padding: 0.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    position: relative;
+  }
+
+  .iphone-mockup::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 30px;
+    background: #000;
+    border-radius: 0 0 1.5rem 1.5rem;
+    z-index: 10;
+  }
+
+  .iphone-screen {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .iphone-screen::after {
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 134px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 9999px;
+  }
+
+  .mobile-container {
+    width: 100%;
+    height: 100%;
   }
 }
 
-.animate-scroll {
-  display: inline-block;
-  animation: scroll 20s linear infinite;
+/* Screen Content - Main layout container */
+.screen-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Top Section - 50% height */
+.top-section {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.logo-container {
+  width: 100%;
+  color: #000;
+  flex-shrink: 0;
+}
+
+.logo-container .logo-svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Projects Grid - 3x3 layout */
+.projects-grid {
+  margin: 30px 20px;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 18px;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Row 1: Full-width header spanning all 3 columns */
+.grid-header {
+  grid-column: 1 / -1;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 16px;
+  min-height: 0;
+  height: 100%;
+}
+
+/* Grid cells (rows 2 & 3) - Cells fill row height */
+.grid-cell {
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make grid cell links look like regular cells */
+.grid-cell.grid-cell-active {
+  background: #000000;
+  cursor: pointer;
+}
+
+.grid-cell.grid-cell-active:hover {
+  opacity: 0.9;
+}
+
+/* Active cell with content - black background, white text */
+.grid-cell-active {
+  background: #000000;
+}
+
+.grid-cell-active .grid-cell-content {
+  color: #ffffff;
+}
+
+.grid-cell-active .project-logo-wrapper {
+  color: #ffffff;
+}
+
+/* Content inside grid cells */
+.grid-cell-content {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Project logo wrapper */
+.project-logo-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.project-logo-wrapper svg {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  color: inherit;
+}
+
+/* Bottom Section - 50% height */
+.bottom-section {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 1;
+  min-height: 0;
+  background: #f0f0f0;
+  /* Fallback background if image doesn't load */
+}
+
+.project-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-button {
+  width: calc(100% - 40px);
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 18px 24px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: auto;
+  margin-top: 30px;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+
+.contact-button:hover {
+  opacity: 0.8;
+}
+
+.logo-container-bottom {
+  width: 100%;
+  color: #000;
+  margin-top: 30px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container-bottom .logo-svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 375px) {
+  .screen-content {
+    padding: 20px;
+  }
+
+  .grid-header {
+    font-size: 1.75rem;
+    padding: 12px;
+  }
+
+  .grid-cell-content {
+    font-size: 2.5rem;
+  }
+
+  .projects-grid {
+    gap: 16px;
+  }
+
+  .contact-button {
+    font-size: 1.125rem;
+    padding: 16px 20px;
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 768px) {
+  .screen-content {
+    padding: 22px;
+  }
+
+  .grid-header {
+    font-size: 1.75rem;
+    padding: 14px;
+  }
+
+  .grid-cell-content {
+    font-size: 2.25rem;
+  }
+
+  .projects-grid {
+    gap: 16px;
+  }
+
+  .contact-button {
+    font-size: 1.125rem;
+    padding: 16px 20px;
+  }
+}
+
+/* Project Detail Page Styles */
+.project-detail-top {
+  flex-shrink: 0;
+  padding-bottom: 20px;
+}
+
+.project-logo-container {
+  width: 100%;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-logo-container svg {
+  width: 100%;
+  height: auto;
+  max-height: 80px;
+}
+
+.project-detail-middle {
+  flex-grow: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.project-detail-bottom {
+  flex-shrink: 0;
+  padding-top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Image Grid - 3 columns, 4 rows */
+.image-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 18px;
+  overflow: hidden;
+}
+
+.image-grid-cell {
+  position: relative;
+  background: #f0f0f0;
+  overflow: hidden;
+  cursor: pointer;
+  min-height: 0;
+}
+
+.image-grid-thumbnail {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.image-grid-cell:hover {
+  opacity: 0.8;
+}
+
+/* Back Button */
+.back-button {
+  width: calc(100% - 40px);
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 18px 24px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: auto;
+  transition: opacity 0.2s;
+}
+
+.back-button:hover {
+  opacity: 0.8;
+}
+
+/* Lightbox Overlay */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.lightbox-image-container {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  max-width: 90vw;
+  max-height: 90vh;
+  cursor: pointer;
+}
+
+.lightbox-image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive adjustments for project detail page */
+@media (max-width: 375px) {
+  .image-grid {
+    gap: 16px;
+  }
+
+  .back-button {
+    font-size: 1.125rem;
+    padding: 16px 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-grid {
+    gap: 16px;
+  }
+
+  .back-button {
+    font-size: 1.125rem;
+    padding: 16px 20px;
+  }
 }
