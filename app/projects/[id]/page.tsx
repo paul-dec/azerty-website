@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ProjectLogo } from '../../components/project-logo';
 import { ImageGrid } from '../../components/image-grid';
@@ -22,9 +23,15 @@ const PROJECT_IMAGES = [
 
 function ProjectDetailContent({ projectId }: { projectId: string }) {
   const router = useRouter();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Trigger animation on mount
+    setIsVisible(true);
+  }, []);
 
   return (
-    <div className="screen-content">
+    <div className={`screen-content page-transition ${isVisible ? 'page-transition-enter' : ''}`}>
       {/* Top Section - Project Logo */}
       <div className="project-detail-top">
         <div className="project-logo-container">
