@@ -26,6 +26,12 @@ const data = [
     'text1': 'This project explores the convergence of gaming culture and fashion as a single visual language. Characters, equipment, and silhouettes are treated as symbols rather than functions — blurring the line between virtual performance and physical presence. The imagery reflects a controlled tension between play, power, and identity.',
     'text2': 'Through this exploration, AZERTY investigates how interactive worlds influence modern aesthetics. By merging references from gaming environments with fashion codes, the project creates a speculative space where style becomes an interface and culture evolves beyond traditional boundaries.',
     'imageCount': 7,
+  },
+  {
+    'title': 'kid',
+    'text1': 'This project explores a speculative vision of future generations shaped by environmental pressure, medical dependency, and technological intervention. Childhood is reimagined as a state of adaptation — where protection, augmentation, and vulnerability coexist within the same form.',
+    'text2': 'Through controlled imagery and minimal composition, AZERTY questions how identity, innocence, and the human body may evolve in response to disease and survival. The project does not aim to predict, but to provoke reflection — presenting a quiet, unsettling future where resilience becomes a defining aesthetic.',
+    'imageCount': 7,
   }
 ]
 

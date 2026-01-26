@@ -1,9 +1,5 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-
 export default function Home() {
   return (
     <>
@@ -35,14 +31,16 @@ export default function Home() {
         <p className='w-full md:w-1/2'>We use artificial intelligence as a core creative tool — combined with branding, art direction, design, and development — to build strong visual identities, websites, and mobile applications.</p>
         <p className='w-full md:w-1/2'>Our approach blends human intuition and machine intelligence to create bold, hybrid experiences. From brand systems to digital products, we push creative boundaries while reducing production time, costs, and complexity.</p>
         <a href='mailto:paul.decrosse@gmail.com'>Contact: paul.decrosse@gmail.com</a>
-        <Image
-          className='md:fixed md:bottom-5 md:right-5 w-full md:w-96'
-          width={500}
-          height={500}
-          src="/image/home1.png"
-          alt="Project"
-          priority
-        />
+        <video
+          className='md:fixed md:bottom-5 md:right-5 w-full md:w-[500px]'
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/image/information.png"
+        >
+          <source src="/image/information.mp4" type="video/mp4" />
+        </video>
       </div>
       {/* Mobile: Direct content (visible on screens < 768px) */}
       {/* <div className="mobile-wrapper">
