@@ -45,6 +45,28 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const project = data.find(p => p.title === params.id);
 
+  const handleCloseLightbox = () => {
+    setSelectedImageIndex(null);
+  };
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && selectedImageIndex !== null) {
+        setSelectedImageIndex(null);
+      }
+    };
+
+    if (selectedImageIndex !== null) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedImageIndex]);
+
   if (!project) {
     return (
       <div className='flex flex-col p-5 gap-5'>
@@ -59,28 +81,6 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
   const handleImageClick = (index: number) => {
     setSelectedImageIndex(index);
   };
-
-  const handleCloseLightbox = () => {
-    setSelectedImageIndex(null);
-  };
-
-  useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && selectedImageIndex !== null) {
-        handleCloseLightbox();
-      }
-    };
-
-    if (selectedImageIndex !== null) {
-      document.addEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'hidden';
-    }
-
-    return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
-    };
-  }, [selectedImageIndex]);
 
   return (
     <>
