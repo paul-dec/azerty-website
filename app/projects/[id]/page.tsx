@@ -42,6 +42,7 @@ const data = [
 ]
 
 export default function ProjectDetail({ params }: { params: { id: string } }) {
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
   const project = data.find(p => p.title === params.id);
 
   if (!project) {
@@ -54,6 +55,32 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
 
   // Generate array of image numbers based on imageCount
   const imageNumbers = Array.from({ length: project.imageCount }, (_, i) => i + 1);
+
+  const handleImageClick = (index: number) => {
+    setSelectedImageIndex(index);
+  };
+
+  const handleCloseLightbox = () => {
+    setSelectedImageIndex(null);
+  };
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && selectedImageIndex !== null) {
+        handleCloseLightbox();
+      }
+    };
+
+    if (selectedImageIndex !== null) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedImageIndex]);
 
   return (
     <>
@@ -99,19 +126,36 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
           </div>
         )}
         <div className='grid grid-cols-2 md:grid-cols-4 gap-5'>
-          {imageNumbers.map((num) => (
+          {imageNumbers.map((num, index) => (
             <Image
               key={num}
-              className='w-full'
+              className='w-full cursor-zoom-in'
               width={500}
               height={500}
               src={`/image/projects/${project.title}/${project.title}${num}.png`}
               alt={`${project.title} ${num}`}
               priority={num <= 4}
+              onClick={() => handleImageClick(index)}
             />
           ))}
         </div>
       </div>
+      {selectedImageIndex !== null && (
+        <div
+          className='fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center cursor-zoom-out'
+          onClick={handleCloseLightbox}
+        >
+          <div className='relative max-w-[90vw] max-h-[90vh]'>
+            <Image
+              src={`/image/projects/${project.title}/${project.title}${imageNumbers[selectedImageIndex]}.png`}
+              alt={`${project.title} ${imageNumbers[selectedImageIndex]}`}
+              width={2000}
+              height={2000}
+              className='max-w-full max-h-[90vh] object-contain'
+            />
+          </div>
+        </div>
+      )}
     </>
   );
 }
