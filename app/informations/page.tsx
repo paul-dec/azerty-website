@@ -12,7 +12,7 @@ export default function Home() {
           <a href='/'>Welcome</a>
           <div className='flex flex-row gap-10'>
             <a href='/informations'>Information</a>
-            <a href='https://www.instagram.com/' target='_blank'>Instagram</a>
+            <a href='https://www.instagram.com/azerty.app/' target='_blank'>Instagram</a>
           </div>
         </div>
         <div className='w-full md:w-1/2'>
