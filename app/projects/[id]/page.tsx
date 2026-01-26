@@ -32,6 +32,12 @@ const data = [
     'text1': 'This project explores a speculative vision of future generations shaped by environmental pressure, medical dependency, and technological intervention. Childhood is reimagined as a state of adaptation — where protection, augmentation, and vulnerability coexist within the same form.',
     'text2': 'Through controlled imagery and minimal composition, AZERTY questions how identity, innocence, and the human body may evolve in response to disease and survival. The project does not aim to predict, but to provoke reflection — presenting a quiet, unsettling future where resilience becomes a defining aesthetic.',
     'imageCount': 7,
+  },
+  {
+    'title': 'medieval',
+    'text1': 'This project reinterprets the figure of the knight through a contemporary and fashion-driven lens. Armor becomes silhouette, protection turns into statement, and medieval symbolism is stripped of nostalgia to reveal a darker, more abstract form of power. The characters exist between myth and future — rigid, silent, and ceremonial.',
+    'text2': 'By blending dark fantasy references with modern fashion codes, AZERTY explores how archetypes can be reshaped into visual identities. The project creates a new language where strength is aesthetic, anonymity is intentional, and tradition is transformed into a speculative, avant-garde presence.',
+    'imageCount': 9,
   }
 ]
 

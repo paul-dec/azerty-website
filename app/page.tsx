@@ -192,6 +192,23 @@ export default function Home() {
             />
           </a>
           <a
+            href='/projects/medieval'
+            onMouseEnter={(e) => {
+              const projectName = extractProjectName(e.currentTarget.href);
+              setHoveredProject(projectName);
+            }}
+            onMouseLeave={() => setHoveredProject(null)}
+          >
+            <Image
+              className='w-full'
+              width={500}
+              height={500}
+              src="/image/projects/medieval/medieval1.png"
+              alt="Project"
+              priority
+            />
+          </a>
+          <a
             href='/projects/azerty'
             onMouseEnter={(e) => {
               const projectName = extractProjectName(e.currentTarget.href);
