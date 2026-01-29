@@ -564,3 +564,21 @@ body {
     padding: 16px 20px;
   }
 }
+
+/* Flickering dot animation */
+@keyframes flicker {
+
+  0%,
+  10%,
+  100% {
+    opacity: 1;
+  }
+
+  5% {
+    opacity: 0;
+  }
+}
+
+.flicker-dot {
+  animation: flicker 10s infinite;
+}

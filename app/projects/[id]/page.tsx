@@ -9,7 +9,7 @@ const data = [
     'title': 'beyond',
     'text1': 'Beyond is built around the idea of collective identity. A visual system where individuals dissolve into a larger structure, favoring presence over personality. The direction artistique explores anonymity, repetition, and contrast, creating a strong and restrained aesthetic that reflects precision, discipline, and cohesion.',
     'text2': 'This vision extends into the web experience. The website was developed as a functional and minimal interface, designed to support clarity, rhythm, and structure. Every interaction serves the content without distraction, allowing the identity to exist as a system rather than a showcase — efficient, controlled, and timeless.',
-    'imageCount': 7,
+    'imageCount': 9,
     'links': [
       'https://www.beyond.media/',
       'https://www.instagram.com/beyondgroupe/'
