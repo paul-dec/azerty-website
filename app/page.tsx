@@ -93,6 +93,8 @@ function ScreenContent() {
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+  const [showIntroVideo, setShowIntroVideo] = useState(true);
+  const [introFading, setIntroFading] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -102,6 +104,27 @@ export default function Home() {
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
+
+  // Block scroll while intro video is showing
+  useEffect(() => {
+    if (showIntroVideo) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [showIntroVideo]);
+
+  const handleIntroVideoEnd = () => {
+    setIntroFading(true);
+    const fadeDuration = 800;
+    setTimeout(() => {
+      setShowIntroVideo(false);
+      setIntroFading(false);
+    }, fadeDuration);
+  };
 
   const extractProjectName = (href: string) => {
     // Handle both full URLs and relative paths
@@ -115,6 +138,31 @@ export default function Home() {
 
   return (
     <>
+      {showIntroVideo && (
+        <div
+          className='fixed inset-0 z-[9999] flex items-center justify-center bg-black transition-opacity duration-[800ms]'
+          style={{ opacity: introFading ? 0 : 1 }}
+        >
+          {/* Mobile: visible below 768px */}
+          <video
+            className='w-full h-full object-contain block md:hidden'
+            src="/video/splashscreen_mobile.mp4"
+            muted
+            playsInline
+            autoPlay
+            onEnded={handleIntroVideoEnd}
+          />
+          {/* Desktop: visible 768px and up */}
+          <video
+            className='w-full h-full object-contain hidden md:block'
+            src="/video/splashscreen_desktop.mp4"
+            muted
+            playsInline
+            autoPlay
+            onEnded={handleIntroVideoEnd}
+          />
+        </div>
+      )}
       <div className='flex flex-col p-5 gap-5'>
         <div className='flex flex-row justify-between'>
           <a href='/'>Welcome</a>
