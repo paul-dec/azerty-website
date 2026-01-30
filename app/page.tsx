@@ -90,9 +90,13 @@ function ScreenContent() {
   );
 }
 
+const INTRO_STORAGE_KEY = 'introVideoLastPlayed';
+const INTRO_COOLDOWN_MS = 10 * 60 * 1000; // 10 minutes
+
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
+  const [hasCheckedStorage, setHasCheckedStorage] = useState(false);
   const [showIntroVideo, setShowIntroVideo] = useState(true);
   const [introFading, setIntroFading] = useState(false);
 
@@ -103,6 +107,21 @@ export default function Home() {
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  // On mount: check if we should skip the intro (played within last 10 min)
+  useEffect(() => {
+    try {
+      const lastPlayed = localStorage.getItem(INTRO_STORAGE_KEY);
+      const lastPlayedTime = lastPlayed ? parseInt(lastPlayed, 10) : 0;
+      const elapsed = lastPlayedTime ? Date.now() - lastPlayedTime : INTRO_COOLDOWN_MS;
+      if (lastPlayedTime && elapsed < INTRO_COOLDOWN_MS) {
+        setShowIntroVideo(false);
+      }
+    } catch {
+      // localStorage unavailable, play intro
+    }
+    setHasCheckedStorage(true);
   }, []);
 
   // Block scroll while intro video is showing
@@ -118,6 +137,11 @@ export default function Home() {
   }, [showIntroVideo]);
 
   const handleIntroVideoEnd = () => {
+    try {
+      localStorage.setItem(INTRO_STORAGE_KEY, Date.now().toString());
+    } catch {
+      // ignore
+    }
     setIntroFading(true);
     const fadeDuration = 800;
     setTimeout(() => {
@@ -138,29 +162,35 @@ export default function Home() {
 
   return (
     <>
-      {showIntroVideo && (
+      {/* Overlay: show while checking storage (black) or while intro is playing; hide when skipped (no flash) */}
+      {(!hasCheckedStorage || showIntroVideo) && (
         <div
           className='fixed inset-0 z-[9999] flex items-center justify-center bg-black transition-opacity duration-[800ms]'
           style={{ opacity: introFading ? 0 : 1 }}
         >
-          {/* Mobile: visible below 768px */}
-          <video
-            className='w-full h-full object-contain block md:hidden'
-            src="/video/splashscreen_mobile.mp4"
-            muted
-            playsInline
-            autoPlay
-            onEnded={handleIntroVideoEnd}
-          />
-          {/* Desktop: visible 768px and up */}
-          <video
-            className='w-full h-full object-contain hidden md:block'
-            src="/video/splashscreen_desktop.mp4"
-            muted
-            playsInline
-            autoPlay
-            onEnded={handleIntroVideoEnd}
-          />
+          {/* Only mount videos after we know we're playing (avoids loading when skipping) */}
+          {hasCheckedStorage && showIntroVideo && (
+            <>
+              {/* Mobile: visible below 768px */}
+              <video
+                className='w-full h-full object-contain block md:hidden'
+                src="/video/splashscreen_mobile.mp4"
+                muted
+                playsInline
+                autoPlay
+                onEnded={handleIntroVideoEnd}
+              />
+              {/* Desktop: visible 768px and up */}
+              <video
+                className='w-full h-full object-contain hidden md:block'
+                src="/video/splashscreen_desktop.mp4"
+                muted
+                playsInline
+                autoPlay
+                onEnded={handleIntroVideoEnd}
+              />
+            </>
+          )}
         </div>
       )}
       <div className='flex flex-col p-5 gap-5'>
